@@ -31,12 +31,12 @@ contract MyEpicNFT is ERC721URIStorage {
     "Meriadoc"
   ];
   string[] secondWords = [
-    "tasted",
-    "killed",
-    "loved",
-    "worshiped",
-    "hated",
-    "respected"
+    "eats",
+    "kills",
+    "loves",
+    "worships",
+    "hates",
+    "respects"
   ];
   string[] thirdWords = ["Hobbits", "Elves", "Dwarves", "Orcs", "Humans"];
 
