@@ -111,7 +111,16 @@ contract MyEpicNFT is ERC721URIStorage {
     return uint256(keccak256(abi.encodePacked(input)));
   }
 
+  function getTotalNFTsMintedSoFar() public view returns (uint256) {
+    uint256 idOfCurrentToken = _tokenIds.current();
+    console.log(idOfCurrentToken, "minted so far");
+    return idOfCurrentToken;
+  }
+
   function makeAnEpicNFT() public {
+    uint256 isFinal = getTotalNFTsMintedSoFar();
+    require(isFinal < 50, "Its 50 NFT - the Last NFT!");
+
     uint256 newItemId = _tokenIds.current();
 
     // We go and randomly grab one word from each of the three arrays.
